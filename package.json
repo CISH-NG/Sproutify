@@ -43,7 +43,11 @@
 		"tailwindcss": "^3.2.7"
 	},
 	"lint-staged": {
-		"*.{js, jsx, ts, tsx}": "eslint --cache --fix",
+		"*.{js,jsx,ts,tsx,html,css}": [
+			"eslint --cache --fix",
+			"prettier --write",
+			"npm run lint"
+		],
 		"*.{js, css, md}": "prettier --write"
 	}
 }

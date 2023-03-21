@@ -6,6 +6,7 @@ import type { AppDispatch, AppState } from './store';
 
 export const useForm =
 	<TContent>(defaultValues: TContent) =>
+	// eslint-disable-next-line no-unused-vars
 	(handler: (content: TContent) => void) =>
 	async (event: ChangeEvent<HTMLFormElement>) => {
 		event.preventDefault();
