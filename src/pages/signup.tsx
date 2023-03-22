@@ -102,9 +102,9 @@ function SignUp() {
                                     </div>
                                 </div>
 							</div>
-							<div>
+							<div className='flex justify-center'>
 								<button
-									className="focus:shadow-outline mt-4 w-full rounded-xl bg-gray-300 py-4 px-4 text-lg font-bold text-white hover:bg-gray-500 focus:outline-none"
+									className="focus:shadow-outline mt-4 w-1/2 rounded-xl bg-gray-300 py-4 px-4 text-lg font-bold text-white hover:bg-gray-500 focus:outline-none"
 									type="button"
 								>
 									Get Started
