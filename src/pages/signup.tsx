@@ -104,7 +104,7 @@ function SignUp() {
 							</div>
 							<div className='flex justify-center'>
 								<button
-									className="focus:shadow-outline mt-4 w-1/2 rounded-xl bg-gray-300 py-4 px-4 text-lg font-bold text-white hover:bg-gray-500 focus:outline-none"
+									className="focus:shadow-outline mt-4 w-1/2 rounded-xl bg-[#D9D9D9] py-4 px-4 text-lg font-bold text-white hover:bg-gray-500 focus:outline-none"
 									type="button"
 								>
 									Get Started
@@ -112,7 +112,7 @@ function SignUp() {
 							</div>
 							<div className="mt-4 flex w-full flex-row justify-center">
 								<a
-									className="inline-block align-baseline text-sm font-bold text-red-500 hover:text-red-800"
+									className="inline-block align-baseline text-sm font-bold text-[#DE0000] hover:text-red-800"
 									href="#"
 								>
 									Read terms and conditions

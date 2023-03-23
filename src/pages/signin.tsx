@@ -37,7 +37,7 @@ function Signin() {
 							/>
 							<div className="mt-4 text-center">
 								<a
-									className="inline-block align-baseline text-sm font-bold text-red-500 hover:text-red-800"
+									className="inline-block align-baseline text-sm font-bold text-[#DE0000] hover:text-red-800"
 									href="#"
 								>
 									Forgot Password
@@ -45,7 +45,7 @@ function Signin() {
 							</div>
 							<div>
 								<button
-									className="w-full mt-4 focus:shadow-outline rounded-xl bg-gray-300 py-4 px-4 font-bold text-lg text-white hover:bg-gray-500 focus:outline-none"
+									className="w-full mt-4 focus:shadow-outline rounded-xl bg-[#D9D9D9] py-4 px-4 font-bold text-lg text-white hover:bg-gray-500 focus:outline-none"
 									type="button"
 								>
 									Sign In
@@ -54,7 +54,7 @@ function Signin() {
                             <div className='w-full mt-4 flex flex-row justify-evenly'>
                                 <p>You do not have an account?</p>
                                 <a
-									className="inline-block align-baseline text-sm font-bold text-green-500 hover:text-green-800"
+									className="inline-block align-baseline text-sm font-bold text-[#00820D] hover:text-green-800"
 									href="#"
 								>Sign Up</a>
                             </div>
