@@ -1,3 +1,5 @@
+const { fontFamily } = require('tailwindcss/defaultTheme');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: [
@@ -10,7 +12,15 @@ module.exports = {
 	],
 	theme: {
 		extend: {
-			
+			colors: {
+				'electric-purple': '#9A4CEC',
+				'inky-black': '#1F1717',
+				purple: '#4C2884'
+			},
+			fontFamily: {
+				sans: ['var(--font-cabin)', ...fontFamily.sans],
+				poppins: ['var(--font-poppins)', ...fontFamily.sans]
+			}
 		}
 	},
 	plugins: []
