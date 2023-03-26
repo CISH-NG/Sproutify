@@ -1,5 +1,5 @@
 import React from 'react';
-import DefaultLayout from '@/components/layouts/DefaultLayout';
+import DefaultLayout from '@/layouts/DefaultLayout';
 
 function SignUp() {
 	return (
@@ -9,7 +9,7 @@ function SignUp() {
 				<div className="w-2/3">
 					<form className="mb-4 mt-4 rounded bg-white px-8 pt-6 pb-8 shadow-md">
 						<div className="mb-4 flex flex-row justify-between">
-							<div className='w-96'>
+							<div className="w-96">
 								<label
 									className="mb-2 block text-sm font-bold text-gray-700"
 									htmlFor="fname"
@@ -23,7 +23,7 @@ function SignUp() {
 									placeholder="First Name"
 								/>
 							</div>
-							<div className='w-96'>
+							<div className="w-96">
 								<label
 									className="mb-2 block text-sm font-bold text-gray-700"
 									htmlFor="lname"
@@ -38,8 +38,8 @@ function SignUp() {
 								/>
 							</div>
 						</div>
-                        <div className="mb-4 flex flex-row justify-between">
-							<div className='w-96'>
+						<div className="mb-4 flex flex-row justify-between">
+							<div className="w-96">
 								<label
 									className="mb-2 block text-sm font-bold text-gray-700"
 									htmlFor="email"
@@ -53,7 +53,7 @@ function SignUp() {
 									placeholder="Email Address"
 								/>
 							</div>
-							<div className='w-96'>
+							<div className="w-96">
 								<label
 									className="mb-2 block text-sm font-bold text-gray-700"
 									htmlFor="phonenumber"
@@ -69,40 +69,54 @@ function SignUp() {
 							</div>
 						</div>
 						<div className="mb-4">
-                            <div>
-							<label
-								className="mb-2 block text-sm font-bold text-gray-700"
-								htmlFor="password"
-							>
-								Password
-							</label>
-							<input
-								className="focus:shadow-outline w-full appearance-none rounded-xl border py-4 px-3 leading-tight text-gray-700 shadow focus:outline-none"
-								id="password"
-								type="text"
-								placeholder="Password"
-							/>
-                            <p className="text-gray-600 text-xs italic">Password should contain atleast one capital letter</p>
-                            <p className="text-gray-600 text-xs italic">Password should contain atleast one number </p>
-                            <p className="text-gray-600 text-xs italic">Password should contain atleast one special key</p>
-                            </div>
-							<div className="mt-4 text-center flex flex-row justify-center space-x-6 ">
+							<div>
+								<label
+									className="mb-2 block text-sm font-bold text-gray-700"
+									htmlFor="password"
+								>
+									Password
+								</label>
+								<input
+									className="focus:shadow-outline w-full appearance-none rounded-xl border py-4 px-3 leading-tight text-gray-700 shadow focus:outline-none"
+									id="password"
+									type="text"
+									placeholder="Password"
+								/>
+								<p className="text-xs italic text-gray-600">
+									Password should contain atleast one capital letter
+								</p>
+								<p className="text-xs italic text-gray-600">
+									Password should contain atleast one number{' '}
+								</p>
+								<p className="text-xs italic text-gray-600">
+									Password should contain atleast one special key
+								</p>
+							</div>
+							<div className="mt-4 flex flex-row justify-center space-x-6 text-center ">
 								<p className="inline-block align-baseline text-sm font-bold">
 									Are you a business owner?
 								</p>
-                                <div className="text-center flex flex-row justify-center space-x-4">
-                                    <div className='space-x-1'>
-                                    <label htmlFor="radioDefault01">Yes</label>
-                                    <input type="radio"  name="flexRadioDefault" id="radioDefault01"/>
-                                    </div>
+								<div className="flex flex-row justify-center space-x-4 text-center">
+									<div className="space-x-1">
+										<label htmlFor="radioDefault01">Yes</label>
+										<input
+											type="radio"
+											name="flexRadioDefault"
+											id="radioDefault01"
+										/>
+									</div>
 
-                                    <div className='space-x-1'>
-                                    <label htmlFor="radioDefault02">No</label>
-                                    <input type="radio" name="flexRadioDefault" id="radioDefault02"/>
-                                    </div>
-                                </div>
+									<div className="space-x-1">
+										<label htmlFor="radioDefault02">No</label>
+										<input
+											type="radio"
+											name="flexRadioDefault"
+											id="radioDefault02"
+										/>
+									</div>
+								</div>
 							</div>
-							<div className='flex justify-center'>
+							<div className="flex justify-center">
 								<button
 									className="focus:shadow-outline mt-4 w-1/2 rounded-xl bg-[#D9D9D9] py-4 px-4 text-lg font-bold text-white hover:bg-gray-500 focus:outline-none"
 									type="button"

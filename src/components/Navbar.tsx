@@ -56,13 +56,13 @@ export default function Navbar() {
 
 				<div className="hidden gap-x-12 xl:flex">
 					<Link
-						href="/login"
+						href="/signin"
 						className="flex h-[71px] items-center rounded-xl border border-purple px-[71px] text-purple"
 					>
 						Sign In
 					</Link>
 					<Link
-						href="/login"
+						href="/signup"
 						className="flex h-[71px] items-center rounded-xl border border-purple bg-purple px-[71px] text-white"
 					>
 						Sign Up

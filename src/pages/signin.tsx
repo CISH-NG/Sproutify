@@ -1,4 +1,4 @@
-import DefaultLayout from '@/components/layouts/DefaultLayout';
+import DefaultLayout from '@/layouts/DefaultLayout';
 import React from 'react';
 
 function Signin() {
@@ -45,19 +45,21 @@ function Signin() {
 							</div>
 							<div>
 								<button
-									className="w-full mt-4 focus:shadow-outline rounded-xl bg-[#D9D9D9] py-4 px-4 font-bold text-lg text-white hover:bg-gray-500 focus:outline-none"
+									className="focus:shadow-outline mt-4 w-full rounded-xl bg-[#D9D9D9] py-4 px-4 text-lg font-bold text-white hover:bg-gray-500 focus:outline-none"
 									type="button"
 								>
 									Sign In
 								</button>
 							</div>
-                            <div className='w-full mt-4 flex flex-row justify-evenly'>
-                                <p>You do not have an account?</p>
-                                <a
+							<div className="mt-4 flex w-full flex-row justify-evenly">
+								<p>You do not have an account?</p>
+								<a
 									className="inline-block align-baseline text-sm font-bold text-[#00820D] hover:text-green-800"
 									href="#"
-								>Sign Up</a>
-                            </div>
+								>
+									Sign Up
+								</a>
+							</div>
 						</div>
 					</form>
 				</div>
