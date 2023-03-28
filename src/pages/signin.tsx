@@ -1,18 +1,45 @@
 import DefaultLayout from '@/layouts/DefaultLayout';
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import googleBtn from '../assets/svg/google-btn.svg';
 import facebookBtn from '../assets/svg/facebook-btn.svg';
 
 function Signin() {
+	const [email, setEmail] = useState('');
+	const [password, setPassword] = useState('');
+	const [isFormFilled, setIsFormFilled] = useState(false);
+
+	useEffect(() => {
+		if (email.trim() !== '' && password.trim() !== '') {
+			setIsFormFilled(true);
+		} else {
+			setIsFormFilled(false);
+		}
+	}, [email, password]);
+
+	function handleInputChange(event: React.FormEvent<HTMLFormElement>) {
+		const { id, value } = event.target as HTMLInputElement;
+
+		if (id === 'email') {
+			setEmail(value);
+		} else if (id === 'password') {
+			setPassword(value);
+		}
+	}
+
 	return (
 		<DefaultLayout>
-			<div className="flex h-[calc(100vh-135px)] flex-col items-center justify-center px-[5%]">
+			<div className="my-16 flex h-[calc(100vh-135px)] flex-col items-center justify-center px-[5%] lg:my-0">
 				<h1 className="mb-10 text-3xl">Sign In</h1>
 
-				<form className="mb-4 mt-4 flex w-full max-w-[470px] flex-col items-center rounded-3xl border border-[#D9D9D9] px-[72px] pt-12 pb-8">
-					<h2 className="mb-10 text-2xl">Input sign in information</h2>
+				<form
+					className="mb-4 mt-4 flex w-full max-w-[470px] flex-col items-center rounded-3xl border border-[#D9D9D9] px-8 pt-12 pb-8 lg:px-[72px]"
+					onChange={handleInputChange}
+				>
+					<h2 className="mb-10 text-center text-2xl">
+						Input sign in information
+					</h2>
 					<div className="w-full">
 						<input
 							className="mb-8 w-full rounded-xl border py-4 px-3 leading-tight text-gray-700 focus:shadow"
@@ -36,14 +63,16 @@ function Signin() {
 						</a>
 
 						<button
-							className="w-full rounded-xl bg-[#4c28848f] py-4 px-4 text-lg font-bold text-white "
+							className={`w-full rounded-xl  ${
+								isFormFilled ? 'bg-[#4C2884]' : 'bg-[#4c28848f]'
+							} py-4 px-4 text-lg font-bold text-white`}
 							type="button"
 						>
 							Sign In
 						</button>
 
 						<div className="mt-6 flex w-full flex-row justify-evenly">
-							<p className="font-sans text-base text-[#1F1717]">
+							<p className="text-center font-sans text-base text-[#1F1717]">
 								You do not have an account?{' '}
 								<a className="text-[#00820D]" href="#">
 									Sign Up
