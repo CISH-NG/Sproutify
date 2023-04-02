@@ -40,4 +40,40 @@ body {
 		width: 50%;
 		background: url('../assets/svg/polygon.svg') no-repeat;
 	}
+
+	.ft-container {
+		background: url('../assets/svg/footer-polygon.svg') no-repeat;
+	}
+
+	@media screen and (min-width: 1024px) {
+		.ft-container {
+			display: grid;
+			grid-template-areas:
+				'logo link'
+				'copy form';
+			grid-template-columns: 1fr 2fr;
+			grid-template-rows: 2fr 1.5fr;
+			row-gap: 4px;
+		}
+
+		.ft-logo {
+			grid-area: logo;
+		}
+
+		.ft-social-link {
+			grid-area: social;
+		}
+
+		.ft-form {
+			grid-area: form;
+		}
+
+		.ft-link {
+			grid-area: link;
+		}
+
+		.ft-copyright {
+			grid-area: copy;
+		}
+	}
 }
