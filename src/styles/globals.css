@@ -40,4 +40,44 @@ body {
 		width: 50%;
 		background: url('../assets/svg/polygon.svg') no-repeat;
 	}
+
+	.ft-pattern {
+		@apply absolute top-[42px] -right-[43px] rotate-90;
+	}
+
+	@media screen and (min-width: 1024px) {
+		.ft-container {
+			display: grid;
+			grid-template-areas:
+				'logo link'
+				'copy form';
+			grid-template-columns: 1fr 2fr;
+			grid-template-rows: 2fr 1.5fr;
+			row-gap: 4px;
+		}
+
+		.ft-logo {
+			grid-area: logo;
+		}
+
+		.ft-social-link {
+			grid-area: social;
+		}
+
+		.ft-form {
+			grid-area: form;
+		}
+
+		.ft-link {
+			grid-area: link;
+		}
+
+		.ft-copyright {
+			grid-area: copy;
+		}
+
+		.ft-pattern {
+			@apply absolute top-0 left-0 rotate-0;
+		}
+	}
 }

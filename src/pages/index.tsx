@@ -24,7 +24,7 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<DefaultLayout>
-				<section className="max-width mt-20 flex flex-col-reverse items-center gap-y-10 gap-x-[5%] lg:mt-0 lg:h-screen lg:flex-row">
+				<section className="max-width mt-20 flex flex-col-reverse items-center gap-y-10 gap-x-[5%] lg:mt-0 lg:h-[calc(100vh-135px)] lg:flex-row">
 					<div className="lg:w-1/2">
 						<div className="mb-8 lg:mb-20">
 							<h1 className="text-center font-sans text-2xl font-semibold text-inky-black lg:text-left lg:text-[56px] lg:leading-[68px]">
@@ -265,7 +265,7 @@ export default function Home() {
 						Our Partners
 					</h2>
 
-					<div className="mt-20 flex justify-between">
+					<div className="mt-20 mb-14 flex flex-wrap justify-between gap-y-6 lg:mb-40">
 						{new Array(5).fill(0).map((_, i) => (
 							<Image src={squareImg} alt="partner" key={i} />
 						))}
