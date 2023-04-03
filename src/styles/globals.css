@@ -41,8 +41,8 @@ body {
 		background: url('../assets/svg/polygon.svg') no-repeat;
 	}
 
-	.ft-container {
-		background: url('../assets/svg/footer-polygon.svg') no-repeat;
+	.ft-pattern {
+		@apply absolute top-[42px] -right-[43px] rotate-90;
 	}
 
 	@media screen and (min-width: 1024px) {
@@ -74,6 +74,10 @@ body {
 
 		.ft-copyright {
 			grid-area: copy;
+		}
+
+		.ft-pattern {
+			@apply absolute top-0 left-0 rotate-0;
 		}
 	}
 }

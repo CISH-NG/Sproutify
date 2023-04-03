@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -5,7 +6,7 @@ import facebook from '../assets/svg/facebook-link.svg';
 import instagram from '../assets/svg/instagram-link.svg';
 import twitter from '../assets/svg/twitter-link.svg';
 import whatsapp from '../assets/svg/whatsapp-link.svg';
-import { useState } from 'react';
+import polygon from '../assets/svg/footer-polygon.svg';
 
 export default function Footer() {
 	const [email, setEmail] = useState('');
@@ -15,7 +16,7 @@ export default function Footer() {
 	};
 
 	return (
-		<footer className="ft-container bg-purple px-[5%] py-8 shadow lg:py-12">
+		<footer className="ft-container relative bg-purple px-[5%] py-8 shadow lg:py-12">
 			<div className="ft-logo">
 				<Link
 					href="/"
@@ -130,6 +131,10 @@ export default function Footer() {
 			<p className="ft-copyright mt-12 text-center text-white lg:mt-0 lg:self-end lg:text-left lg:text-2xl">
 				&copy; Copyright {new Date().getFullYear()}
 			</p>
+
+			<div className="ft-pattern">
+				<Image src={polygon} alt="pattern" aria-hidden="true" />
+			</div>
 		</footer>
 	);
 }

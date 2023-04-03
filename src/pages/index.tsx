@@ -265,7 +265,7 @@ export default function Home() {
 						Our Partners
 					</h2>
 
-					<div className="mt-20 flex flex-wrap justify-between gap-y-6">
+					<div className="mt-20 mb-14 flex flex-wrap justify-between gap-y-6 lg:mb-40">
 						{new Array(5).fill(0).map((_, i) => (
 							<Image src={squareImg} alt="partner" key={i} />
 						))}
