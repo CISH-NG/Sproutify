@@ -31,7 +31,7 @@ export default function Navbar() {
 	const router = useRouter();
 	return (
 		<nav className="bg-white py-8 shadow">
-			<div className="flex max-w-screen-2xl items-center justify-between px-[5%] lg:mx-auto">
+			<div className="flex items-center justify-between px-[5%] lg:mx-auto 2xl:max-w-screen-2xl 2xl:px-0">
 				<Link href="/" className="cursor-pointer font-poppins text-3xl">
 					Sproutify
 				</Link>
