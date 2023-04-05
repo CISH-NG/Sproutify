@@ -30,7 +30,7 @@ function Signin() {
 
 	return (
 		<DefaultLayout>
-			<div className="my-16 flex h-[calc(100vh-135px)] flex-col items-center justify-center px-[5%] lg:my-20">
+			<div className="my-16 flex min-h-[calc(100vh-135px)] flex-col items-center justify-center px-[5%] lg:my-20">
 				<h1 className="mb-10 text-3xl">Sign In</h1>
 
 				<form
