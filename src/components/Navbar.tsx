@@ -31,11 +31,8 @@ export default function Navbar() {
 	const router = useRouter();
 	return (
 		<nav className="bg-white py-8 shadow">
-			<div className="flex max-w-screen-2xl items-center justify-between px-[5%] lg:mx-auto">
-				<Link
-					href="/"
-					className="lgtext-[40px] cursor-pointer font-poppins text-3xl"
-				>
+			<div className="flex items-center justify-between px-[5%] lg:mx-auto 2xl:max-w-screen-2xl 2xl:px-0">
+				<Link href="/" className="cursor-pointer font-poppins text-3xl">
 					Sproutify
 				</Link>
 
@@ -57,13 +54,13 @@ export default function Navbar() {
 				<div className="hidden gap-x-12 xl:flex">
 					<Link
 						href="/signin"
-						className="flex h-[71px] items-center rounded-xl border border-purple px-[71px] text-purple"
+						className="flex h-[60px] cursor-pointer items-center rounded-xl border border-purple px-[60px] text-purple"
 					>
 						Sign In
 					</Link>
 					<Link
 						href="/signup"
-						className="flex h-[71px] items-center rounded-xl border border-purple bg-purple px-[71px] text-white"
+						className="flex h-[60px] cursor-pointer items-center rounded-xl border border-purple bg-purple px-[60px] text-white"
 					>
 						Sign Up
 					</Link>
