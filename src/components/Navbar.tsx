@@ -13,7 +13,7 @@ const MenuItems = [
 	{
 		index: 1,
 		label: 'About Us',
-		url: '/aboutUs'
+		url: '/about-us'
 	},
 	{
 		index: 2,
