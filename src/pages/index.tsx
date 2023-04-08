@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 import heroImage from '../assets/images/hero-image.png';
 import retailer from '../assets/images/retailer.png';
-import mobilePreview from '../assets/images/mobile-preview.png';
+import mobilepreview from '../assets/images/mobilepreview.png';
 import frame7 from '../assets/images/frame-7.png';
 import frame8 from '../assets/images/frame-8.png';
 import frame9 from '../assets/images/frame-9.png';
@@ -173,7 +173,7 @@ export default function Home() {
 
 					<div className="relative w-1/2">
 						<Image
-							src={mobilePreview}
+							src={mobilepreview}
 							alt="The mobile banner preview"
 							className="absolute right-0 bottom-0"
 						/>
