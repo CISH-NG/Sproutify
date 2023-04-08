@@ -2,9 +2,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { Drawer } from 'antd';
-import hamburgerIcon from '../assets/svg/hamburger.svg';
+import hamburgerIcon from '../../assets/svg/hamburger.svg';
 import { useState } from 'react';
 import { CloseMobileIcon } from '@/assets/svg/close-mobile';
+import { NavbarProps } from './Navbar.types';
+import frame8 from '../../assets/images/frame-8.png';
 
 const MenuItems = [
 	{
@@ -29,7 +31,7 @@ const MenuItems = [
 	}
 ];
 
-export default function Navbar() {
+export default function Navbar({ loggedin = false }: NavbarProps) {
 	const router = useRouter();
 	const [open, setOpen] = useState(false);
 
@@ -62,20 +64,30 @@ export default function Navbar() {
 					))}
 				</ul>
 
-				<div className="hidden gap-x-12 xl:flex">
-					<Link
-						href="/signin"
-						className="flex h-[60px] cursor-pointer items-center rounded-xl border border-purple px-[60px] text-purple"
-					>
-						Sign In
-					</Link>
-					<Link
-						href="/signup"
-						className="flex h-[60px] cursor-pointer items-center rounded-xl border border-purple bg-purple px-[60px] text-white"
-					>
-						Sign Up
-					</Link>
-				</div>
+				{!loggedin && (
+					<div className="hidden gap-x-12 xl:flex">
+						<Link
+							href="/signin"
+							className="flex h-[60px] cursor-pointer items-center rounded-xl border border-purple px-[60px] text-purple"
+						>
+							Sign In
+						</Link>
+						<Link
+							href="/signup"
+							className="flex h-[60px] cursor-pointer items-center rounded-xl border border-purple bg-purple px-[60px] text-white"
+						>
+							Sign Up
+						</Link>
+					</div>
+				)}
+
+				{loggedin && (
+					<div className="hidden gap-x-12 xl:flex">
+						<Image src={frame8} alt="Profile Image" />
+
+						<span>Gabriel Ogbeche</span>
+					</div>
+				)}
 
 				<button className="xl:hidden" onClick={showDrawer}>
 					<Image src={hamburgerIcon} alt="hamburger menu icon" />
