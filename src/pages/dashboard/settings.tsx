@@ -2,13 +2,13 @@ import Head from 'next/head';
 // import Image from 'next/image';
 
 import DashboardLayout from '@/layouts/DashboardLayout';
-import DashBoard from '@/screens/Dashboard/Dashboard';
+import Settings from '@/screens/Settings/Settings';
 
-const DashboardPage = () => {
+const SettingsPage = () => {
 	return (
 		<DashboardLayout>
 			<Head>
-				<title>Sproutify | Dashboard</title>
+				<title>Sproutify | Settings</title>
 				<meta
 					name="description"
 					content="Sproutify - the platform that empowers businesses to grow and flourish!"
@@ -16,9 +16,9 @@ const DashboardPage = () => {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<DashBoard />
+			<Settings />
 		</DashboardLayout>
 	);
 };
 
-export default DashboardPage;
+export default SettingsPage;

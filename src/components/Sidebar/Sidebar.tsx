@@ -9,6 +9,7 @@ import {
 } from '@/assets/svg/dasboard-menu';
 import { useCallback } from 'react';
 import { SidebarMenuItemProps } from './Sidebar.types';
+import { useRouter } from 'next/router';
 
 const SidebarMenuItems: SidebarMenuItemProps[] = [
 	{
@@ -56,10 +57,11 @@ const SidebarMenuItems: SidebarMenuItemProps[] = [
 ];
 
 export default function Sidebar() {
+	const router = useRouter();
 	const isSignout = useCallback((label: string) => label === 'Sign Out', []);
 
 	return (
-		<nav className="fixed mt-10 ml-8 hidden h-[80vh] w-[20vw] rounded-3xl bg-white py-14 pl-5 lg:block xl:pl-[5%]">
+		<nav className="absolute mt-10 ml-8 hidden min-h-[80vh] w-[20vw] rounded-3xl bg-white py-14 pl-5 lg:block xl:pl-[5%]">
 			<ul className="flex flex-col gap-y-8 font-sans text-2xl">
 				{SidebarMenuItems.map((item) => (
 					<li
@@ -70,7 +72,7 @@ export default function Sidebar() {
 							href={item.url}
 							className={`flex cursor-pointer gap-x-6  ${
 								isSignout(item.label) ? 'text-[#DE0000]' : 'text-[#1f1717bf]'
-							} `}
+							} ${router.pathname === item.url && 'text-[#9A4CEC]'}`}
 						>
 							{item.icon}
 							{item.label}
