@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 import { NotificationIcon } from '@/assets/svg/red-notification';
+import unsplash from '../../assets/images/unsplash.jpg';
 
 export default function Settings() {
 	return (
@@ -15,11 +16,9 @@ export default function Settings() {
 
 			<div className="mb-8 flex items-center gap-x-6 rounded-xl bg-white py-[33px] px-10">
 				<Image
-					src="https://images.unsplash.com/photo-1526253038957-bce54e05968e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+					src={unsplash}
 					alt="profile image"
 					className="h-[100px] w-[100px] rounded-full object-cover"
-					width={100}
-					height={100}
 				/>
 
 				<div>
