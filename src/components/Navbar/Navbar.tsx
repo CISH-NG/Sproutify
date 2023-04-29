@@ -53,7 +53,7 @@ export default function Navbar({ loggedin = false }: NavbarProps) {
 					{MenuItems.map((item) => (
 						<li key={item.index}>
 							<Link
-								href="/"
+								href={item.url}
 								className={`transition-all duration-300 ease-in-out hover:text-[#1F1717] ${
 									router.pathname === item.url && 'text-[#1F1717]'
 								}`}
@@ -108,12 +108,12 @@ export default function Navbar({ loggedin = false }: NavbarProps) {
 							<CloseMobileIcon />
 						</button>
 					</div>
-					<ul className="font-sans text-2xl font-normal text-[#1F1717]">
+					<ul className="font-sans text-xl font-normal text-[#1F1717] hover:text-[#1F1717]">
 						{MenuItems.map((item) => (
 							<li key={item.index}>
 								<Link
 									href={item.url}
-									className="flex border-b border-[#D9D9D9] pt-9 pb-7"
+									className="flex border-b border-[#D9D9D9] pt-8 pb-6"
 								>
 									{item.label}
 								</Link>
@@ -121,7 +121,7 @@ export default function Navbar({ loggedin = false }: NavbarProps) {
 						))}
 					</ul>
 
-					<div className="mt-28 flex justify-center gap-x-[10%]">
+					<div className="mt-24 flex justify-center gap-x-[10%]">
 						<Link
 							href="/signup"
 							className="flex h-12 cursor-pointer items-center rounded-xl border border-purple px-[7%] text-base text-purple"
