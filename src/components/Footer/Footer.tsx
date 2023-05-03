@@ -2,11 +2,11 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import facebook from '../assets/svg/facebook-link.svg';
-import instagram from '../assets/svg/instagram-link.svg';
-import twitter from '../assets/svg/twitter-link.svg';
-import whatsapp from '../assets/svg/whatsapp-link.svg';
-import polygon from '../assets/svg/footer-polygon.svg';
+import facebook from '../../assets/svg/facebook-link.svg';
+import instagram from '../../assets/svg/instagram-link.svg';
+import twitter from '../../assets/svg/twitter-link.svg';
+import whatsapp from '../../assets/svg/whatsapp-link.svg';
+import polygon from '@/assets/svg/footer-polygon.svg';
 
 export default function Footer() {
 	const [email, setEmail] = useState('');

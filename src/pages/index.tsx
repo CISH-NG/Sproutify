@@ -4,7 +4,6 @@ import Image from 'next/image';
 
 import heroImage from '../assets/images/hero-image.png';
 import retailer from '../assets/images/retailer.png';
-import mobilePreview from '../assets/images/mobile-preview.png';
 import frame7 from '../assets/images/frame-7.png';
 import frame8 from '../assets/images/frame-8.png';
 import frame9 from '../assets/images/frame-9.png';
@@ -12,7 +11,9 @@ import frame10 from '../assets/images/frame-10.png';
 import squareImg from '../assets/images/square.png';
 import group95 from '../assets/svg/group-95.svg';
 import group96 from '../assets/svg/group-96.svg';
-// import styles from '@/styles/Home.module.css';
+import Polygon from '@/assets/svg/polygon';
+import mobilepreview1 from '../assets/images/mobile-prev1.png';
+import mobilepreview2 from '../assets/images/mobile-prev12.png';
 
 export default function Home() {
 	return (
@@ -160,23 +161,30 @@ export default function Home() {
 					</div>
 				</section>
 
-				<section
-					style={{ display: 'none' }}
-					className="purple-banner relative mt-14 mb-8 flex h-20 w-screen items-center bg-purple  px-[5%] lg:mt-40 lg:h-80"
-				>
-					<div className="w-1/2">
-						<p className="max-w-[565px] text-center font-sans text-base font-semibold text-white lg:py-[33px] lg:px-[10px] lg:text-left lg:text-5xl">
-							Over <span className=" text-[#FEC431] ">50,000</span> businesses
-							enjoying tech services
-						</p>
+				<section className=" relative mt-12 flex h-[100px] w-full justify-around gap-5 bg-[#4C2884] lg:mt-52 lg:h-[320px] ">
+					<div
+						className="absolute top-0 left-0 z-0 rotate-0"
+						aria-hidden="true"
+					>
+						<Polygon />
 					</div>
 
-					<div className="relative w-1/2">
-						<Image
-							src={mobilePreview}
-							alt="The mobile banner preview"
-							className="absolute right-0 bottom-0"
-						/>
+					<div className="flex justify-between gap-x-3 px-10 lg:max-w-7xl">
+						<div className="relative z-10 flex w-1/2 items-center">
+							<p className="max-w-lg text-left text-base text-white lg:text-5xl ">
+								Over <span className="text-[#FEC431]">50,000</span> businesses
+								enjoying tech services
+							</p>
+						</div>
+						<div className="relative flex w-1/2 overflow-hidden">
+							<div className="flex items-end">
+								<Image src={mobilepreview1} alt="" className=" object-cover" />
+							</div>
+
+							<div className="flex items-start">
+								<Image src={mobilepreview2} alt="" className=" object-cover " />
+							</div>
+						</div>
 					</div>
 				</section>
 
