@@ -35,16 +35,6 @@ body {
 		@apply mx-auto flex max-w-[319px] justify-center rounded-xl bg-purple py-4 font-sans text-base text-white lg:mr-auto lg:ml-0;
 	}
 
-	.purple-banner::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		width: 50%;
-		background: url('../assets/svg/polygon.svg') no-repeat;
-	}
-
 	.ft-pattern {
 		@apply absolute top-[42px] -right-[43px] rotate-90;
 	}
