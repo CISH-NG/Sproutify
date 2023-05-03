@@ -64,7 +64,7 @@ export default function Settings() {
 				</button>
 			</div>
 
-			<div className="mb-8 flex items-center gap-x-6 rounded-xl bg-white py-[33px] px-10">
+			<div className="mb-8 flex items-center gap-x-6 rounded-xl bg-white p-5 md:p-10">
 				<Image
 					src={unsplash}
 					alt="profile image"
@@ -80,7 +80,7 @@ export default function Settings() {
 			{settingsData.map((data) => (
 				<div
 					key={data.category}
-					className="mb-6 flex items-center justify-between rounded-xl bg-white p-5 md:p-10"
+					className="mb-6 flex items-center justify-between gap-x-3 rounded-xl bg-white p-5 md:p-10"
 				>
 					<div className="flex flex-col gap-6 md:flex-row md:items-center ">
 						{data.icon}
