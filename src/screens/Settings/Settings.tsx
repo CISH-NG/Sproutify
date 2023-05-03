@@ -2,6 +2,56 @@ import Image from 'next/image';
 
 import { NotificationIcon } from '@/assets/svg/red-notification';
 import unsplash from '../../assets/images/unsplash.jpg';
+import ArrowRightIcon from '@/assets/svg/arrow-right';
+import Link from 'next/link';
+import {
+	KeyIcon,
+	UserIcon,
+	NotificationIcon as NotifyIcon,
+	CardIcon,
+	PhoneIcon,
+	UserPlusIcon
+} from '@/assets/svg/settings-link-icon';
+
+const settingsData = [
+	{
+		icon: <UserIcon />,
+		category: 'User Info',
+		description:
+			'All your account information such as email address, location and phone number',
+		link: '#'
+	},
+	{
+		icon: <KeyIcon />,
+		category: 'Change Password',
+		description: 'Make changes to your password anytime',
+		link: '#'
+	},
+	{
+		icon: <NotifyIcon />,
+		category: 'Notifications',
+		description: 'Turn on/off email notifications anytime',
+		link: '#'
+	},
+	{
+		icon: <CardIcon />,
+		category: 'Payment',
+		description: 'Update subscription payment info anytime',
+		link: '#'
+	},
+	{
+		icon: <PhoneIcon />,
+		category: 'Social Media',
+		description: 'Update URl to social media accounts',
+		link: '#'
+	},
+	{
+		icon: <UserPlusIcon />,
+		category: 'Account Management',
+		description: 'Update subscription payment info anytime',
+		link: '#'
+	}
+];
 
 export default function Settings() {
 	return (
@@ -27,114 +77,24 @@ export default function Settings() {
 				</div>
 			</div>
 
-			<div className="mb-8 rounded-xl bg-white p-10">
-				<h3 className="mb-10 text-[32px] font-normal">User Info</h3>
-
-				<div className="grid gap-y-8 gap-x-[60px] md:grid-cols-2">
-					<div className="flex flex-col gap-y-4">
-						<label htmlFor="username" className="text-2xl">
-							User Name
-						</label>
-						<input
-							name="username"
-							className="rounded-xl border border-[#CECECE40] bg-[#F0F0F026] py-5 px-10 text-2xl"
-							placeholder="alfredchadow@gmail.com"
-							disabled
-						/>
+			{settingsData.map((data) => (
+				<div
+					key={data.category}
+					className="mb-6 flex items-center justify-between rounded-xl bg-white p-5 md:p-10"
+				>
+					<div className="flex flex-col gap-6 md:flex-row md:items-center ">
+						{data.icon}
+						<div className="flex flex-col gap-y-2">
+							<h3 className="text-2xl font-normal">{data.category}</h3>
+							<p className="text-xl text-[#A0A0A0]">{data.description}</p>
+						</div>
 					</div>
 
-					<div className="flex flex-col gap-y-4">
-						<label htmlFor="username" className="text-2xl">
-							Phone number
-						</label>
-						<input
-							name="username"
-							className="rounded-xl border border-[#CECECE40] bg-[#F0F0F026] py-5 px-10 text-2xl"
-							placeholder="alfredchadow@gmail.com"
-							disabled
-						/>
-					</div>
-
-					<div className="flex flex-col gap-y-4">
-						<label htmlFor="username" className="text-2xl">
-							Address
-						</label>
-						<input
-							name="username"
-							className="rounded-xl border border-[#CECECE40] bg-[#F0F0F026] py-5 px-10 text-2xl"
-							placeholder="alfredchadow@gmail.com"
-							disabled
-						/>
-					</div>
-
-					<div className="flex flex-col gap-y-4">
-						<label htmlFor="username" className="text-2xl">
-							Email address
-						</label>
-						<input
-							name="username"
-							className="rounded-xl border border-[#CECECE40] bg-[#F0F0F026] py-5 px-10 text-2xl"
-							placeholder="alfredchadow@gmail.com"
-							disabled
-						/>
-					</div>
+					<Link href={data.link}>
+						<ArrowRightIcon />
+					</Link>
 				</div>
-			</div>
-
-			<div className="mb-8 rounded-xl bg-white p-10">
-				<h3 className="mb-10 text-[32px] font-normal">Change Password</h3>
-
-				<div className="grid gap-y-8 gap-x-[60px] md:grid-cols-2">
-					<div className="flex flex-col gap-y-4">
-						<label htmlFor="username" className="text-2xl">
-							Current Password
-						</label>
-						<input
-							type="password"
-							name="username"
-							className="rounded-xl border border-[#CECECE40] bg-[#F0F0F026] py-5 px-10 text-2xl"
-							placeholder="*************"
-							disabled
-						/>
-					</div>
-
-					<div className="flex flex-col gap-y-4">
-						<label htmlFor="username" className="text-2xl">
-							New Password
-						</label>
-						<input
-							name="username"
-							className="rounded-xl border border-[#CECECE40] bg-[#F0F0F026] py-5 px-10 text-2xl"
-							placeholder="*************"
-							disabled
-						/>
-					</div>
-
-					<div className="flex flex-col gap-y-4">
-						<label htmlFor="username" className="text-2xl">
-							Phone number
-						</label>
-						<input
-							name="username"
-							className="rounded-xl border border-[#CECECE40] bg-[#F0F0F026] py-5 px-10 text-2xl"
-							placeholder="alfredchadow@gmail.com"
-							disabled
-						/>
-					</div>
-
-					<div className="flex flex-col gap-y-4">
-						<label htmlFor="username" className="text-2xl">
-							Email address
-						</label>
-						<input
-							name="username"
-							className="rounded-xl border border-[#CECECE40] bg-[#F0F0F026] py-5 px-10 text-2xl"
-							placeholder="alfredchadow@gmail.com"
-							disabled
-						/>
-					</div>
-				</div>
-			</div>
+			))}
 		</>
 	);
 }
