@@ -2,9 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import notificationIcon from '@/assets/svg/notificationIcon.svg';
 import communicationIcon from '@/assets/svg/communicationIcon.svg';
-import Frame43 from '@/assets/images/Frame43.png';
-import Calendar from 'react-calendar';
-//import 'react-calendar/dist/Calendar.css';
+import ContentComponent from './ContentComponent';
 
 function Content() {
 	return (
@@ -35,27 +33,10 @@ function Content() {
 					<h2 className=" text-2xl text-white">Support</h2>
 				</div>
 			</div>
-			<div>
-				<div className="m-4 flex w-[920px] justify-between">
-					<div className="h-[251px] w-[280px]">
-						<Image src={Frame43} alt="image" />
-					</div>
-					<div
-						className="h-[251px] w-[280px] rounded-2xl p-8"
-						style={{ backgroundColor: '#FFFFFF' }}
-					>
-						<h1 className=" mb-9 text-xl font-semibold">Caption</h1>
-						<p className=" mb-2 text-sm font-normal">
-							Make changes to your website to keep your clients up to speed.
-						</p>
-						<p className=" text-sm font-normal">#Ying #Yang #Yum #Yam</p>
-					</div>
-					<div className="h-[251px] w-[280px]">
-						<Calendar />
-					</div>
-				</div>
-				<div className="m-3 w-[920px] border border-[#D9D9D9]"></div>
-			</div>
+			<ContentComponent />
+			<ContentComponent />
+			<ContentComponent />
+			<ContentComponent />
 		</div>
 	);
 }
