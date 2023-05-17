@@ -1,6 +1,8 @@
 import AddIcon from '@/assets/svg/addIcon';
 import { BudgetIcon, SocialIcon, EditIcon } from '@/assets/svg/dasboard-menu';
 import DownloadIcon from '@/assets/svg/dowonloadIcon';
+import DashboardColumnChart from '@/components/DashboardColumnChart/DashboardColumnChart';
+import HorizontalDashboardColumnChart from '@/components/HorizontalDashboardColumnChart/HorizontalDashboardColumnChart';
 
 export default function DashBoard() {
 	return (
@@ -53,6 +55,20 @@ export default function DashBoard() {
 						Make changes to your website to keep your clients up to speed.
 					</p>
 
+					<div className="h-20" />
+					<hr className="border-t-[1px] border-[#cecece40]" />
+				</div>
+			</div>
+
+			<div className="mt-6 flex flex-col gap-y-6 sm:gap-x-4 md:flex-row">
+				<div className="h-[226px] rounded-3xl bg-white p-8 pl-10 pr-[77px] md:w-5/12">
+					<DashboardColumnChart />
+					<div className="h-20" />
+					<hr className="border-t-[1px] border-[#cecece40]" />
+				</div>
+
+				<div className="h-[226px] rounded-3xl bg-white p-8 pl-10 md:w-7/12">
+					<HorizontalDashboardColumnChart />
 					<div className="h-20" />
 					<hr className="border-t-[1px] border-[#cecece40]" />
 				</div>
