@@ -2,12 +2,12 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 import {
-	BudgetIcon,
-	ChartIcon,
 	DashboardIcon,
 	SettingsIcon,
 	SignoutIcon,
-	SocialIcon
+	SocialIcon2,
+	ContentIcon,
+	GlobeIcon2
 } from '@/assets/svg/dasboard-menu';
 import { useCallback, useEffect, useState } from 'react';
 import { SidebarMenuItemProps } from './Sidebar.types';
@@ -23,34 +23,29 @@ const SidebarMenuItems: SidebarMenuItemProps[] = [
 		index: 1,
 		label: 'Social media',
 		url: '/dashboard/social-media',
-		icon: <SocialIcon />
+		icon: <SocialIcon2 />
 	},
 	{
 		index: 2,
-		label: 'Budget',
-		url: '/dashboard/budget',
-		icon: <BudgetIcon />
+		label: 'Content',
+		url: '/dashboard/content',
+		icon: <ContentIcon />
 	},
 	{
 		index: 3,
-		label: 'Expense tra',
-		url: '/dashboard/expenses',
-		icon: <ChartIcon />
+		label: 'Website',
+		url: '/dashboard/website',
+		icon: <GlobeIcon2 />
 	},
+
 	{
 		index: 4,
-		label: 'Invoice',
-		url: '/dashboard/invoice',
-		icon: <DashboardIcon />
-	},
-	{
-		index: 5,
 		label: 'Settings',
 		url: '/dashboard/settings',
 		icon: <SettingsIcon />
 	},
 	{
-		index: 6,
+		index: 5,
 		label: 'Sign Out',
 		url: '#',
 		icon: <SignoutIcon />
@@ -83,7 +78,7 @@ export default function Sidebar() {
 	return (
 		<>
 			<nav className="absolute mt-10 ml-8 hidden min-h-[80vh] w-[20vw] rounded-3xl bg-white py-14 pl-5 lg:block xl:pl-[5%]">
-				<ul className="flex flex-col gap-y-8 font-sans text-2xl">
+				<ul className="flex flex-col gap-y-8 font-sans text-xl">
 					{SidebarMenuItems.map((item) => (
 						<li
 							key={item.index}
