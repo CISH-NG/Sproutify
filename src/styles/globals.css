@@ -39,6 +39,25 @@ body {
 		@apply absolute top-[42px] -right-[43px] rotate-90;
 	}
 
+	/* .blinking {
+		animation: blink 1s infinite;
+	}
+
+	@keyframes blink {
+		50% {
+			opacity: 0;
+		}
+	} */
+
+	.custom-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+
+	.custom-scrollbar {
+		scrollbar-width: none; /* Firefox */
+		-ms-overflow-style: none; /* IE/Edge */
+	}
+
 	@media screen and (min-width: 1024px) {
 		.ft-container {
 			display: grid;
