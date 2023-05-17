@@ -1,9 +1,18 @@
 import AddIcon from '@/assets/svg/addIcon';
-import { BudgetIcon, SocialIcon, EditIcon } from '@/assets/svg/dasboard-menu';
-import FacebookIcon from '@/assets/svg/FacebookIcon';
-import InstagramIcon from '@/assets/svg/InstagramIcon';
-import TwitterIcon from '@/assets/svg/TwitterIcon';
-import WhatsAppIcon from '@/assets/svg/WhatsAppIcon';
+import {
+	SocialIcon,
+	ImageIcon,
+	FileIcon,
+	CalendarIcon,
+	ChromeIcon,
+	ShuffleIcon,
+	FacebookIcon,
+	InstagramIcon,
+	TwitterIcon,
+	WhatsAppIcon,
+	BookIcon,
+	GlobeIcon
+} from '@/assets/svg/dasboard-menu';
 import DashboardColumnChart from '@/components/DashboardColumnChart/DashboardColumnChart';
 import DashboardContentCard from '@/components/DashboardContentCard/DashboardContentCard';
 import DashboardInvoiceCard from '@/components/DashboardInvoiceCard/DashboardInvoiceCard';
@@ -30,24 +39,21 @@ export default function DashBoard() {
 				<DashboardContentCard
 					name="Content"
 					content="	All your digital content scheduled for the month."
-					icon={<BudgetIcon />}
+					icon={<BookIcon />}
 					CTA={[
-						{ url: '#', content: <FacebookIcon /> },
-						{ url: '#', content: <InstagramIcon /> },
-						{ url: '#', content: <TwitterIcon /> },
-						{ url: '#', content: <WhatsAppIcon /> }
+						{ url: '#', content: <ImageIcon /> },
+						{ url: '#', content: <FileIcon /> },
+						{ url: '#', content: <CalendarIcon /> }
 					]}
 				/>
 
 				<DashboardContentCard
 					name="Your website"
 					content="Make changes to your website to keep your clients up to speed."
-					icon={<EditIcon />}
+					icon={<GlobeIcon />}
 					CTA={[
-						{ url: '#', content: <FacebookIcon /> },
-						{ url: '#', content: <InstagramIcon /> },
-						{ url: '#', content: <TwitterIcon /> },
-						{ url: '#', content: <WhatsAppIcon /> }
+						{ url: '#', content: <ChromeIcon /> },
+						{ url: '#', content: <ShuffleIcon /> }
 					]}
 				/>
 			</div>
