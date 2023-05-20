@@ -116,14 +116,17 @@ function AboutUsPage() {
 							Our vision is to revolutionize the way businesses operate by
 							providing cutting-edge solutions that drive growth, profitability
 							and success.
-							{/* <br /> <br />
-							Lorem ipsum dolor sit amet consectetur. Nisl morbi tellus diam
-							mauris. Ipsum diam cras magnis ac. Consequat feugiat egestas
-							rhoncus est magna euismod in dolor risus. Morbi nulla feugiat sit
-							orci. Ac et velit sed phasellus mattis. Mauris imperdiet aenean
-							convallis aliquet. Nunc vestibulum accumsan suspendisse dignissim
-							magna. Sit cursus augue tortor mattis. Nullam sed ac tincidunt
-							cras non */}
+						</p>
+						<h2 className="mt-10 text-center text-xl font-bold lg:text-left lg:text-4xl">
+							Our Mission
+						</h2>
+						<p className="mt-10 text-lg text-[#A0A0A0] lg:text-2xl">
+							Our mission is to empower businesses with innovative and
+							transformative technology solutions that optimize efficiency,
+							unleash untapped potential, and foster sustainable growth. We are
+							committed to delivering cutting-edge tools, exceptional service,
+							and unparalleled expertise, enabling our clients to thrive in a
+							rapidly evolving digital landscape.
 						</p>
 					</div>
 
