@@ -16,10 +16,10 @@ import {
 const settingsData = [
 	{
 		icon: <UserIcon />,
-		category: 'User Info',
+		category: 'Account Info',
 		description:
 			'All your account information such as email address, location and phone number',
-		link: '#'
+		link: 'settings/account-info'
 	},
 	{
 		icon: <KeyIcon />,
