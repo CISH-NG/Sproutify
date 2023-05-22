@@ -25,7 +25,7 @@ const settingsData = [
 		icon: <KeyIcon />,
 		category: 'Change Password',
 		description: 'Make changes to your password anytime',
-		link: '#'
+		link: 'settings/change-password'
 	},
 	{
 		icon: <NotifyIcon />,
@@ -43,7 +43,7 @@ const settingsData = [
 		icon: <PhoneIcon />,
 		category: 'Social Media',
 		description: 'Update URl to social media accounts',
-		link: '#'
+		link: 'settings/social-media'
 	},
 	{
 		icon: <UserPlusIcon />,

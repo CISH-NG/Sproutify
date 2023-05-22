@@ -1,6 +1,6 @@
 import { NotificationIcon } from '@/assets/svg/red-notification';
 import DashboardLayout from '@/layouts/DashboardLayout';
-import AccountInfoPage from '@/screens/Settings/AccountInfo/AccountInfo';
+import ChangePasswordPage from '@/screens/Settings/ChangePassword/ChangePassword';
 
 export default function AccountInfo() {
 	return (
@@ -13,7 +13,7 @@ export default function AccountInfo() {
 				</button>
 			</div>
 
-			<AccountInfoPage />
+			<ChangePasswordPage />
 		</DashboardLayout>
 	);
 }

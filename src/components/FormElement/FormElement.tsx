@@ -8,7 +8,7 @@ const FormElement: React.FC<FormElementProps> = ({
 	errorText
 }) => {
 	return (
-		<div className="mb-8 flex flex-col gap-y-4">
+		<div className="mb-8 flex w-full flex-col gap-y-4">
 			{label && <label className="block text-xl text-[#1F1717]">{label}</label>}
 			<div className="flex flex-col gap-y-1">
 				{children}

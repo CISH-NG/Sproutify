@@ -16,8 +16,7 @@ const GlobeIcon2 = (props: SVGProps<SVGSVGElement>) => {
 				width="31"
 				height="31"
 				rx="15.5"
-				fill="#1F1717"
-				fill-opacity="0.75"
+				fill="currentColor"
 			/>
 			<g clip-path="url(#clip0_95_1453)">
 				<path

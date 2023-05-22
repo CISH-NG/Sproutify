@@ -1,8 +1,8 @@
 import { NotificationIcon } from '@/assets/svg/red-notification';
 import DashboardLayout from '@/layouts/DashboardLayout';
-import AccountInfoPage from '@/screens/Settings/AccountInfo/AccountInfo';
+import SocialMediaSettingsPage from '@/screens/Settings/SocialMedia/SocialMedia';
 
-export default function AccountInfo() {
+export default function SocialMediaSettings() {
 	return (
 		<DashboardLayout>
 			<div className="mb-6 flex items-center justify-between">
@@ -13,7 +13,7 @@ export default function AccountInfo() {
 				</button>
 			</div>
 
-			<AccountInfoPage />
+			<SocialMediaSettingsPage />
 		</DashboardLayout>
 	);
 }

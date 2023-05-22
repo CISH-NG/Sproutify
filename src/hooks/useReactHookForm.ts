@@ -1,8 +1,13 @@
 import { ObjectSchema } from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { useForm, DeepPartial, UseFormReturn } from 'react-hook-form';
+import {
+	useForm,
+	DeepPartial,
+	UseFormReturn,
+	FieldValues
+} from 'react-hook-form';
 
-const useReactHookForm = <T>(
+const useReactHookForm = <T extends FieldValues>(
 	schema: ObjectSchema<any, any, any, any>,
 	defaultValues?: DeepPartial<T>
 ): UseFormReturn<T> =>

@@ -87,8 +87,12 @@ export default function Sidebar() {
 							<Link
 								href={item.url}
 								className={`flex cursor-pointer gap-x-6  ${
-									isSignout(item.label) ? 'text-[#DE0000]' : 'text-[#1f1717bf]'
-								} ${router.pathname === item.url && 'text-[#9A4CEC]'}`}
+									isSignout(item.label)
+										? 'text-[#DE0000]'
+										: router.pathname === item.url
+										? 'text-[#9A4CEC]'
+										: 'text-[#504A4A]'
+								}`}
 							>
 								{item.icon}
 								{item.label}
