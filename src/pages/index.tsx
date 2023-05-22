@@ -34,11 +34,16 @@ export default function Home() {
 								<span className="text-electric-purple">Business</span>
 							</h1>
 
+							<p className="text-paragraph mt-6 ">
+								Welcome to Sproutify - the platform that empowers businesses to
+								grow and flourish! With our all-in-one solution, you can easily
+								create websites, generate invoices, access eye-catching designs,
+								launch powerful digital marketing campaigns, and seamlessly
+								manage all digital aspects of your business.
+							</p>
 							<p className="text-paragraph mt-6">
-								Lorem ipsum dolor sit amet consectetur. Iaculis ultrices egestas
-								in malesuada at vitae vel iaculis fermentum. Non semper
-								suscipit. Egestas donec suspendisse vitae scelerisque orci enim.
-								Non mattis lectus vitae ultrices.
+								Say goodbye to the hassle of juggling multiple tools and hello
+								to the streamlined efficiency of Sproutify!
 							</p>
 						</div>
 
@@ -79,10 +84,15 @@ export default function Home() {
 							<h2 className="text-subtitle">Get a website for your business</h2>
 
 							<p className="text-paragraph mt-6">
-								Lorem ipsum dolor sit amet consectetur. Iaculis ultrices egestas
-								in malesuada at vitae vel iaculis fermentum. Non semper
-								suscipit. Egestas donec suspendisse vitae scelerisque orci enim.
-								Non mattis lectus vitae ultrices.
+								You do not need to be a coding expert to get your website up and
+								running quickly. We provide expert support, including hosting,
+								domain registration, and SEO optimization, to ensure that your
+								website is always running smoothly and attracting new visitors.
+							</p>
+							<p className="text-paragraph mt-6">
+								Whether you are looking to launch a small business website or a
+								personal blog, our platform has everything you need to get
+								started and succeed online.
 							</p>
 						</div>
 
@@ -100,10 +110,11 @@ export default function Home() {
 							</h2>
 
 							<p className="text-paragraph mt-6">
-								Lorem ipsum dolor sit amet consectetur. Iaculis ultrices egestas
-								in malesuada at vitae vel iaculis fermentum. Non semper
-								suscipit. Egestas donec suspendisse vitae scelerisque orci enim.
-								Non mattis lectus vitae ultrices.
+								Streamline your invoicing process and save time with our quick
+								invoicing solution. Easily generate professional invoices for
+								your customers with just a few clicks. Say goodbye to manual
+								invoicing and hello to fast, efficient billing. Try our quick
+								invoicing tool today and get paid faster!
 							</p>
 						</div>
 
@@ -128,8 +139,9 @@ export default function Home() {
 
 					<div className="m-auto mt-8 flex max-w-lg flex-col gap-y-8 gap-x-[5%] lg:mt-20 lg:max-w-full lg:flex-row xl:gap-x-20 ">
 						<div className="flex flex-col rounded-3xl bg-[#CECECE40] px-7 pt-10 pb-4 lg:w-1/2 lg:px-14 lg:pt-16 lg:pb-12">
-							<h3 className="mb-8 max-w-[280px] text-xl font-semibold sm:max-w-md lg:mb-[54px] lg:text-[32px] lg:leading-10">
-								Encouraging tech solutions for small and large businesses
+							<h3 className="mb-8 max-w-[280px] text-xl font-semibold sm:max-w-md lg:mb-[54px] lg:text-[28px] lg:leading-10">
+								We simplify your operations by providing a centralized hub for
+								all your critical processes
 							</h3>
 
 							<div>
@@ -137,15 +149,16 @@ export default function Home() {
 							</div>
 
 							<p className="font-sans text-base text-[#A0A0A0] lg:text-2xl">
-								Lorem ipsum dolor sit amet consectetur. Iaculis ultrices Leo
-								vitae enim sed morbi. Egestas donec suspendisse vitae
-								scelerisque orci enim. Non mattis lectus vitae ultrices.
+								From Website creation to financial reporting, we streamline your
+								workflow, increase collaboration, and improve visibility, so you
+								can focus on what you do best - growing your business.
 							</p>
 						</div>
 
 						<div className="flex flex-col rounded-3xl bg-[#CECECE40] px-7 pt-10 pb-4 lg:w-1/2 lg:px-14 lg:pt-16 lg:pb-12">
-							<h3 className="mb-8 max-w-[280px] text-xl font-semibold sm:max-w-md lg:mb-[54px] lg:text-[32px] lg:leading-10">
-								Encouraging tech solutions for small and large businesses
+							<h3 className="mb-8 max-w-[280px] text-xl font-semibold sm:max-w-md lg:mb-[54px] lg:text-[28px] lg:leading-10">
+								Sproutify empowers you with real-time insights and data-driven
+								decision-making capabilities.
 							</h3>
 
 							<div>
@@ -153,9 +166,9 @@ export default function Home() {
 							</div>
 
 							<p className="font-sans text-base text-[#A0A0A0] lg:text-2xl">
-								Lorem ipsum dolor sit amet consectetur. Iaculis ultrices Leo
-								vitae enim sed morbi. Egestas donec suspendisse vitae
-								scelerisque orci enim. Non mattis lectus vitae ultrices.
+								With our robust analytics and reporting tools, you can gain a
+								holistic view of your business performance and make informed
+								decisions that drive growth and profitability.
 							</p>
 						</div>
 					</div>
@@ -205,9 +218,10 @@ export default function Home() {
 									Gabriel Jalingo
 								</h3>
 								<p className="mt-1 text-sm text-[#A0A0A0] md:mt-4 md:text-lg  lg:mt-8 lg:text-2xl">
-									“Lorem ipsum dolor sit amet consectetur. Iaculis ultrices Leo
-									vitae enim sed morbi. Egestas donec suspendisse vitae
-									scelerisque orci enim. Non mattis lectus vitae ultrices”.
+									“Sproutify has completely transformed our workflow and made
+									managing our projects a breeze. We have seen a significant
+									increase in productivity and efficiency since we started using
+									it.”.
 								</p>
 							</div>
 						</div>
@@ -220,12 +234,13 @@ export default function Home() {
 							/>
 							<div>
 								<h3 className="font-sans text-base font-semibold text-[#1F1717] md:text-2xl lg:text-[32px]">
-									Gabriel Jalingo
+									Lanre Fagbemi
 								</h3>
 								<p className="mt-1 text-sm text-[#A0A0A0] md:mt-4 md:text-lg  lg:mt-8 lg:text-2xl">
-									“Lorem ipsum dolor sit amet consectetur. Iaculis ultrices Leo
-									vitae enim sed morbi. Egestas donec suspendisse vitae
-									scelerisque orci enim. Non mattis lectus vitae ultrices”.
+									“With Sproutifys advanced analytics and reporting
+									capabilities, we were able to identify areas of improvement in
+									our business operations and make data-driven decisions that
+									have led to substantial growth.”.
 								</p>
 							</div>
 						</div>
@@ -238,12 +253,12 @@ export default function Home() {
 							/>
 							<div>
 								<h3 className="font-sans text-base font-semibold text-[#1F1717] md:text-2xl lg:text-[32px]">
-									Gabriel Jalingo
+									Yunusa Tanko
 								</h3>
 								<p className="mt-1 text-sm text-[#A0A0A0] md:mt-4 md:text-lg  lg:mt-8 lg:text-2xl">
-									“Lorem ipsum dolor sit amet consectetur. Iaculis ultrices Leo
-									vitae enim sed morbi. Egestas donec suspendisse vitae
-									scelerisque orci enim. Non mattis lectus vitae ultrices”.
+									“The support team is incredibly responsive and always goes
+									above and beyond to ensure we are getting the most out of the
+									platform. We feel like valued partners, not just customers.”.
 								</p>
 							</div>
 						</div>
@@ -256,12 +271,11 @@ export default function Home() {
 							/>
 							<div>
 								<h3 className="font-sans text-base font-semibold text-[#1F1717] md:text-2xl lg:text-[32px]">
-									Gabriel Jalingo
+									Evelyn Okolo
 								</h3>
 								<p className="mt-1 text-sm text-[#A0A0A0] md:mt-4 md:text-lg  lg:mt-8 lg:text-2xl">
-									“Lorem ipsum dolor sit amet consectetur. Iaculis ultrices Leo
-									vitae enim sed morbi. Egestas donec suspendisse vitae
-									scelerisque orci enim. Non mattis lectus vitae ultrices”.
+									“It is user-friendly and easy to navigate, even for
+									non-technical team members”.
 								</p>
 							</div>
 						</div>

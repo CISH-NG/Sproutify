@@ -36,18 +36,18 @@ function AboutUsPage() {
 							About Us
 						</h1>
 						<p className="mx-auto mt-5 text-center text-lg  text-[#aaa5a5] lg:max-w-2xl lg:text-2xl">
-							A peak into who we are and what drives us to ease business
-							practices amongst MSMEs and SMEs
+							Empower your business with Sproutify- the ultimate
+							transformational tool for businesses of all sizes.
 						</p>
 
-						<p className="mx-auto mt-10 text-center text-lg font-normal  lg:max-w-7xl lg:text-left lg:text-xl">
-							Lorem ipsum dolor sit amet consectetur. Nisl morbi tellus diam
-							mauris. Ipsum diam cras magnis ac. Consequat feugiat egestas
-							rhoncus est magna euismod in dolor risus. Morbi nulla feugiat sit
-							orci. Ac et velit sed phasellus mattis. Mauris imperdiet aenean
-							convallis aliquet. Nunc vestibulum accumsan suspendisse dignissim
-							magna. Sit cursus augue tortor mattis. Nullam sed ac tincidunt
-							cras non
+						<p className="mx-auto mt-10 text-center text-lg font-normal  lg:max-w-5xl lg:text-left lg:text-xl">
+							Sproutify is committed to supporting your business every step of
+							the way. From managing sales to -tracking expenses, our
+							comprehensive app offers a wealth of features and resources
+							designed specifically to help business owners like you achieve
+							success. With Sproutify, you will have access to a supportive
+							community and expert guidance that will help you reach your goals
+							and maximize your growth potential.
 						</p>
 					</section>
 				</div>
@@ -78,28 +78,55 @@ function AboutUsPage() {
 						</div>
 					</div>
 				</section>
+				<section>
+					<div className="mx-auto mt-14 flex w-full flex-col items-center justify-center lg:max-w-5xl">
+						<h1 className=" mb-8 font-semibold lg:text-3xl">
+							Why Choose Sproutify?
+						</h1>
+						<div className="mx-auto text-2xl text-[#5a5656] lg:max-w-5xl">
+							<h3 className=" mb-8">
+								&#x2022; Sproutify offers an all-in-one solution for
+								streamlining your business operations and elevating your
+								professionalism.
+							</h3>
+							<h3 className=" mb-8">
+								&#x2022; With Sproutify, you can optimize your workflow to save
+								time and increase efficiency, all while taking your business to
+								the next level.
+							</h3>
+							<h3 className=" mb-8">
+								&#x2022; Grow your business the smart way; Our advanced features
+								and resources are designed to help you work smarter, not harder
+								so you can focus on what you do best - growing your business.
+							</h3>
+							<h3>
+								&#x2022; Join our community today and take advantage of all the
+								resources and tools we have to offer.
+							</h3>
+						</div>
+					</div>
+				</section>
 
 				<section className="mx-auto flex flex-col-reverse gap-12 p-10 lg:mt-20 lg:max-w-7xl lg:flex-row lg:gap-36">
 					<div className="lg:w-3/5">
 						<h2 className="text-center text-xl font-bold lg:text-left lg:text-4xl">
-							Business Model
+							Our Vision
 						</h2>
-						<p className="mt-10 text-lg text-[#A0A0A0] lg:text-xl">
-							Lorem ipsum dolor sit amet consectetur. Nisl morbi tellus diam
-							mauris. Ipsum diam cras magnis ac. Consequat feugiat egestas
-							rhoncus est magna euismod in dolor risus. Morbi nulla feugiat sit
-							orci. Ac et velit sed phasellus mattis. Mauris imperdiet aenean
-							convallis aliquet. Nunc vestibulum accumsan suspendisse dignissim
-							magna. Sit cursus augue tortor mattis. Nullam sed ac tincidunt
-							cras non
-							<br /> <br />
-							Lorem ipsum dolor sit amet consectetur. Nisl morbi tellus diam
-							mauris. Ipsum diam cras magnis ac. Consequat feugiat egestas
-							rhoncus est magna euismod in dolor risus. Morbi nulla feugiat sit
-							orci. Ac et velit sed phasellus mattis. Mauris imperdiet aenean
-							convallis aliquet. Nunc vestibulum accumsan suspendisse dignissim
-							magna. Sit cursus augue tortor mattis. Nullam sed ac tincidunt
-							cras non
+						<p className="mt-10 text-lg text-[#A0A0A0] lg:text-2xl">
+							Our vision is to revolutionize the way businesses operate by
+							providing cutting-edge solutions that drive growth, profitability
+							and success.
+						</p>
+						<h2 className="mt-10 text-center text-xl font-bold lg:text-left lg:text-4xl">
+							Our Mission
+						</h2>
+						<p className="mt-10 text-lg text-[#A0A0A0] lg:text-2xl">
+							Our mission is to empower businesses with innovative and
+							transformative technology solutions that optimize efficiency,
+							unleash untapped potential, and foster sustainable growth. We are
+							committed to delivering cutting-edge tools, exceptional service,
+							and unparalleled expertise, enabling our clients to thrive in a
+							rapidly evolving digital landscape.
 						</p>
 					</div>
 
@@ -112,7 +139,7 @@ function AboutUsPage() {
 					<h2 className="mx-auto mb-4 max-w-sm text-center text-xl font-bold lg:text-4xl">
 						Meet Our Team
 					</h2>
-					<div className="flex flex-row flex-wrap items-center justify-center gap-4 p-2 lg:gap-x-10 lg:gap-y-24 lg:p-10">
+					<div className="flex flex-row flex-wrap items-center justify-center gap-4 p-2 lg:gap-x-8 lg:gap-y-24 lg:p-10">
 						{profileData.map((profile) => (
 							<div key={profile.id}>
 								<div className=" h-24 w-24 md:h-36 md:w-36 lg:h-64 lg:w-64">
@@ -131,7 +158,7 @@ function AboutUsPage() {
 					</div>
 				</section>
 
-				<section className="my-10 mx-auto mt-24 px-10 lg:max-w-7xl">
+				{/* <section className="my-10 mx-auto mt-24 px-10 lg:max-w-7xl">
 					<h2 className="mx-auto max-w-sm text-center text-xl font-bold lg:text-4xl">
 						Our Portfolio
 					</h2>
@@ -152,7 +179,7 @@ function AboutUsPage() {
 							/>
 						))}
 					</div>
-				</section>
+				</section> */}
 			</div>
 		</DefaultLayout>
 	);
