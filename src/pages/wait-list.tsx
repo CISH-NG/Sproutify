@@ -56,11 +56,11 @@ const waitListData = [
 function Waitlist() {
 	return (
 		<DefaultLayout>
-			<div className=" mx-auto flex h-[747px] w-full flex-col items-center justify-center gap-10 bg-[#4C2884] text-[#FFFFFF]">
-				<h1 className=" mt-[60px] text-6xl font-semibold  ">
+			<div className="mx-auto flex h-[747px] w-full flex-col items-center justify-center gap-10 bg-[#4C2884]  text-[#FFFFFF]">
+				<h1 className=" mt-[60px] w-[206px] text-4xl font-semibold lg:text-6xl  ">
 					<span className=" text-[#FEC431]">Sproutify</span> is coming soon
 				</h1>
-				<p className="w-[987px] text-center text-2xl font-normal">
+				<p className="w-[310px] text-center text-base font-normal lg:w-[987px] lg:text-2xl">
 					Be the first to harness the transformative power of Sproutify: the
 					ultimate digital arsenal that unlocks a universe of possibilities. We
 					provide an all-in-one solution where you can effortlessly tap into
@@ -72,12 +72,12 @@ function Waitlist() {
 					landscape and embark on an exciting journey together where limitless
 					opportunities await - get ready to thrive!
 				</p>
-				<p className=" text-2xl font-normal">
+				<p className=" text-base font-normal lg:text-2xl">
 					Join our waiting list and enjoy launch updates
 				</p>
 				<form className="relative p-[4]">
 					<input
-						className="h-[64px] w-[420px] rounded-l bg-[#1F171799] py-2 pl-4 pr-12"
+						className="h-[64px] w-[260px] rounded-l bg-[#1F171799] py-2 pl-4 pr-12 lg:w-[420px]"
 						id="email"
 						type="email"
 						placeholder="Email Address"
@@ -88,32 +88,37 @@ function Waitlist() {
 				</form>
 			</div>
 			<section className="mx-auto mt-[140px] flex flex-col ">
-				<div className=" mx-auto text-3xl">
+				<div className=" mx-auto text-[18px] lg:text-3xl">
 					<h1>We offer digital solutions to your business</h1>
 				</div>
 
-				<div className=" flex flex-row flex-wrap items-center justify-center gap-10 p-2 lg:gap-x-8 lg:gap-y-24 lg:p-10">
+				<div className=" flex flex-row flex-wrap items-center justify-center  p-2 lg:gap-10 lg:gap-x-8 lg:gap-y-24 lg:p-10">
 					{waitListData.map((waitlist) => (
-						<div key={waitlist.id} className="h-[400px] w-full lg:w-[450px]">
+						<div
+							key={waitlist.id}
+							className="h-[350px] w-full lg:h-[400px] lg:w-[450px]"
+						>
 							<div className="mb-[40px] flex h-[50px] items-center justify-center">
 								<Image src={waitlist.image} alt="" />
 							</div>
-							<h1 className=" mb-[20px] text-center text-2xl font-normal">
+							<h1 className=" mb-[20px] text-center text-base font-normal lg:text-2xl">
 								{waitlist.name}
 							</h1>
-							<p className=" text-2xl text-[#A0A0A0]">{waitlist.message}</p>
+							<p className=" text-base text-[#A0A0A0] lg:text-2xl">
+								{waitlist.message}
+							</p>
 						</div>
 					))}
 				</div>
 			</section>
 
 			<section className=" mx-auto my-[160px] flex w-full flex-col items-center justify-center gap-10">
-				<p className=" text-2xl font-normal">
+				<p className=" text-base font-normal lg:text-2xl">
 					Join our waiting list and enjoy launch updates
 				</p>
 				<form className="relative p-[4]">
 					<input
-						className="h-[64px] w-[420px] rounded-l bg-[#1F171799] py-2 pl-4 pr-12"
+						className="h-[64px] w-[260px] rounded-l bg-[#1F171799] py-2 pl-4 pr-12 lg:w-[420px]"
 						id="email"
 						type="email"
 						placeholder="Email Address"
