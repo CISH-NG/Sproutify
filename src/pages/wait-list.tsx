@@ -57,7 +57,7 @@ function Waitlist() {
 	return (
 		<DefaultLayout>
 			<div className="mx-auto flex h-[747px] w-full flex-col items-center justify-center gap-10 bg-[#4C2884]  text-[#FFFFFF]">
-				<h1 className=" mt-[60px] w-[206px] text-4xl font-semibold lg:text-6xl  ">
+				<h1 className=" mt-[60px] w-[206px] text-4xl font-semibold lg:w-[720px] lg:text-6xl  ">
 					<span className=" text-[#FEC431]">Sproutify</span> is coming soon
 				</h1>
 				<p className="w-[310px] text-center text-base font-normal lg:w-[987px] lg:text-2xl">
