@@ -2,11 +2,11 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import facebook from '../../assets/svg/facebook-link.svg';
-import instagram from '../../assets/svg/instagram-link.svg';
-import twitter from '../../assets/svg/twitter-link.svg';
-import whatsapp from '../../assets/svg/whatsapp-link.svg';
 import polygon from '@/assets/svg/footer-polygon.svg';
+import Facebook from '@/assets/svg/facebook-link';
+import Twitter from '@/assets/svg/twitter-link';
+import Instagram from '@/assets/svg/instagram-link';
+import Whatsapp from '@/assets/svg/whatsapp-link';
 
 export default function Footer() {
 	const [email, setEmail] = useState('');
@@ -28,19 +28,19 @@ export default function Footer() {
 
 					<div className="mt-4 mb-8 flex w-2/4 gap-x-4 lg:mt-6 lg:w-full lg:gap-x-6">
 						<Link href="#">
-							<Image src={facebook} alt="facebook icon" />
+							<Facebook />
 						</Link>
 
 						<Link href="#">
-							<Image src={instagram} alt="instagram icon" />
+							<Instagram />
 						</Link>
 
 						<Link href="#">
-							<Image src={twitter} alt="twitter icon" />
+							<Twitter />
 						</Link>
 
 						<Link href="#">
-							<Image src={whatsapp} alt="whatsapp icon" />
+							<Whatsapp />
 						</Link>
 					</div>
 				</div>

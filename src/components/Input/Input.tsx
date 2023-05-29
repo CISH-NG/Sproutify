@@ -19,7 +19,13 @@ const Input: React.FC<InputProps> = ({
 		defaultValue,
 		shouldUnregister
 	});
-	return <AntdInput {...field} {...rest} className="styled-input" />;
+	return (
+		<AntdInput
+			{...field}
+			{...rest}
+			className={rest.className ?? 'styled-input'}
+		/>
+	);
 };
 
 export default Input;
