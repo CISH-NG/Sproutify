@@ -97,4 +97,24 @@ body {
 	.invoice-item {
 		@apply flex max-w-[283px] flex-col gap-y-4 rounded-3xl border border-[#D9D9D9] bg-white px-10 pt-8 pb-5;
 	}
+
+	.styled-input {
+	}
+	.styled-input.ant-input,
+	.styled-input.ant-input,
+	.styled-input.ant-input-affix-wrapper .ant-input {
+		font-size: 18px;
+		padding: 16px;
+		width: 100%;
+		background: rgba(240, 240, 240, 0.15);
+		border: 1px solid rgba(206, 206, 206, 0.25);
+		border-radius: 12px;
+	}
+
+	.styled-input.ant-input::placeholder,
+	.styled-input.ant-input::placeholder,
+	.styled-input.ant-input-affix-wrapper .ant-input::placeholder {
+		font-size: 18px;
+		color: #a0a0a0;
+	}
 }

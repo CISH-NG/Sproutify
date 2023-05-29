@@ -16,16 +16,16 @@ import {
 const settingsData = [
 	{
 		icon: <UserIcon />,
-		category: 'User Info',
+		category: 'Account Info',
 		description:
 			'All your account information such as email address, location and phone number',
-		link: '#'
+		link: 'settings/account-info'
 	},
 	{
 		icon: <KeyIcon />,
 		category: 'Change Password',
 		description: 'Make changes to your password anytime',
-		link: '#'
+		link: 'settings/change-password'
 	},
 	{
 		icon: <NotifyIcon />,
@@ -43,7 +43,7 @@ const settingsData = [
 		icon: <PhoneIcon />,
 		category: 'Social Media',
 		description: 'Update URl to social media accounts',
-		link: '#'
+		link: 'settings/social-media'
 	},
 	{
 		icon: <UserPlusIcon />,

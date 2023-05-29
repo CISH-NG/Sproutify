@@ -10,7 +10,14 @@ const DashboardIcon = (props: SVGProps<SVGSVGElement>) => {
 			xmlns="http://www.w3.org/2000/svg"
 			{...props}
 		>
-			<rect x="0.5" y="0.5" width="31" height="31" rx="15.5" fill="#9A4CEC" />
+			<rect
+				x="0.5"
+				y="0.5"
+				width="31"
+				height="31"
+				rx="15.5"
+				fill="currentColor"
+			/>
 			<path
 				fillRule="evenodd"
 				clipRule="evenodd"
