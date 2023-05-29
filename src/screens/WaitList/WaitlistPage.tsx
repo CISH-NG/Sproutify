@@ -190,7 +190,7 @@ function WaitlistPage() {
 						<input
 							type="email"
 							{...register('email')} // Register the input field
-							className="h-full w-full rounded-lg bg-transparent py-5 pl-8 pr-[126px] text-white"
+							className="h-full w-full rounded-lg bg-transparent py-5 pl-8 pr-[126px] text-white placeholder:text-[#ffffff80]"
 							placeholder="Email address"
 						/>
 
