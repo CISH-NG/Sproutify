@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import waitlista from '@/assets/svg/waitlista.svg';
 import waitlistb from '@/assets/svg/waitlistb.svg';
@@ -16,6 +16,11 @@ import Facebook from '@/assets/svg/facebook-link';
 import Instagram from '@/assets/svg/instagram-link';
 import Twitter from '@/assets/svg/twitter-link';
 import Whatsapp from '@/assets/svg/whatsapp-link';
+import useReactHookForm from '@/hooks/useReactHookForm';
+import { WaitlistPageProps, WaitlistPageSchema } from './WaitlistPage.types';
+import { Spin } from 'antd';
+import { LoadingOutlined } from '@ant-design/icons';
+import axios from 'axios';
 
 const waitListData = [
 	{
@@ -62,7 +67,37 @@ const waitListData = [
 	}
 ];
 
+const antIcon = (
+	<LoadingOutlined style={{ fontSize: 24, color: '#FEC431' }} spin />
+);
+
 function WaitlistPage() {
+	const [loading, setLoading] = useState(false);
+
+	const {
+		// watch,
+		register,
+		handleSubmit
+	} = useReactHookForm<WaitlistPageProps>(WaitlistPageSchema, {});
+
+	const onWaitlistSubmit = (data: WaitlistPageProps) => {
+		console.log(data);
+		setLoading(true);
+
+		try {
+			const response = axios.post(
+				'https://script.google.com/macros/s/AKfycbzVQ1ihAKhS5XmUqQ7WrRWzEXRqz7Yi20ruzcrpIt6mOWRnF7dospytWVdDVyRBOEuvpw/exec',
+				data
+			);
+
+			console.log(response);
+		} catch (error) {
+			console.log(error);
+		} finally {
+			setLoading(false);
+		}
+	};
+
 	return (
 		<>
 			<Header />
@@ -92,9 +127,7 @@ function WaitlistPage() {
 				</div>
 
 				<form
-					onSubmit={(e) => {
-						e.preventDefault();
-					}}
+					onSubmit={handleSubmit(onWaitlistSubmit)}
 					className="mt-20 flex flex-col items-center justify-center md:mt-10"
 				>
 					<label
@@ -107,6 +140,7 @@ function WaitlistPage() {
 					<div className="relative mt-6 h-16 w-full max-w-[420px] rounded-lg bg-[#1f171799]">
 						<input
 							type="email"
+							{...register('email')} // Register the input field
 							className="h-full w-full rounded-lg bg-transparent py-5 pl-8 pr-[126px] text-white"
 							placeholder="Email address"
 						/>
@@ -114,8 +148,9 @@ function WaitlistPage() {
 						<button
 							type="submit"
 							className="absolute top-1/2 right-4 w-[120px] -translate-y-1/2 transform rounded-lg bg-[#1F1717] px-4 py-2 text-xl text-white"
+							disabled={loading}
 						>
-							Join
+							{!loading ? 'Join' : <Spin indicator={antIcon} />}
 						</button>
 					</div>
 				</form>
@@ -141,9 +176,7 @@ function WaitlistPage() {
 				</div>
 
 				<form
-					onSubmit={(e) => {
-						e.preventDefault();
-					}}
+					onSubmit={handleSubmit(onWaitlistSubmit)}
 					className="mt-20 flex flex-col items-center justify-center md:mt-10"
 				>
 					<label
@@ -156,7 +189,8 @@ function WaitlistPage() {
 					<div className="relative mt-6 h-16 w-full max-w-[420px] rounded-lg bg-[#4c288480]">
 						<input
 							type="email"
-							className="h-full w-full rounded-lg bg-transparent py-5 pl-8 pr-[160px] text-white placeholder:text-[#ffffff80]"
+							{...register('email')} // Register the input field
+							className="h-full w-full rounded-lg bg-transparent py-5 pl-8 pr-[126px] text-white"
 							placeholder="Email address"
 						/>
 
