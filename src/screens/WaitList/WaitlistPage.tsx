@@ -18,9 +18,14 @@ import Twitter from '@/assets/svg/twitter-link';
 import Whatsapp from '@/assets/svg/whatsapp-link';
 import useReactHookForm from '@/hooks/useReactHookForm';
 import { WaitlistPageProps, WaitlistPageSchema } from './WaitlistPage.types';
-import { Spin } from 'antd';
+import { Spin, Modal } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
 import axios from 'axios';
+import Confetti from 'react-confetti';
+import useWindowSize from 'react-use/lib/useWindowSize';
+
+// axios.defaults.headers.post['Content-Type'] = 'text/plain';
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 const waitListData = [
 	{
@@ -71,31 +76,86 @@ const antIcon = (
 	<LoadingOutlined style={{ fontSize: 24, color: '#FEC431' }} spin />
 );
 
-function WaitlistPage() {
-	const [loading, setLoading] = useState(false);
+const antIcon2 = (
+	<LoadingOutlined style={{ fontSize: 24, color: '#FFF' }} spin />
+);
 
+function WaitlistPage() {
+	const [firstLoading, setFirstLoading] = useState(false);
+	const [secondLoading, setSecondLoading] = useState(false);
+	const [modalVisible, setModalVisible] = useState(false);
+	const [showConfetti, setShowConfetti] = useState(false);
+	const { width, height } = useWindowSize();
+
+	// First form
 	const {
-		// watch,
-		register,
-		handleSubmit
+		handleSubmit: handleSubmitFirst,
+		register: registerFirst,
+		reset: resetFirst
+		// formState: { errors: errorsFirst }
 	} = useReactHookForm<WaitlistPageProps>(WaitlistPageSchema, {});
 
-	const onWaitlistSubmit = (data: WaitlistPageProps) => {
-		console.log(data);
-		setLoading(true);
+	// Second form
+	const {
+		handleSubmit: handleSubmitSecond,
+		register: registerSecond,
+		reset: resetSecond
+		// formState: { errors: errorsSecond }
+	} = useReactHookForm<WaitlistPageProps>(WaitlistPageSchema, {});
+
+	const onWaitlistSubmitFirst = (data: WaitlistPageProps) => {
+		// handle form submission for the first form
+		setFirstLoading(true);
+		FormApiRequest(data);
+	};
+
+	const onWaitlistSubmitSecond = (data: WaitlistPageProps) => {
+		// handle form submission for the second form
+		setSecondLoading(true);
+		FormApiRequest(data);
+	};
+
+	async function FormApiRequest(data: WaitlistPageProps) {
+		if (!API_URL) {
+			return;
+		}
 
 		try {
-			const response = axios.post(
-				'https://script.google.com/macros/s/AKfycbzVQ1ihAKhS5XmUqQ7WrRWzEXRqz7Yi20ruzcrpIt6mOWRnF7dospytWVdDVyRBOEuvpw/exec',
-				data
-			);
+			const formData = new FormData();
+			Object.entries(data).forEach(([key, value]) => {
+				if (Array.isArray(value)) {
+					value.forEach((item) => formData.append(`${key}[]`, item));
+				} else {
+					formData.append(key, value);
+				}
+			});
 
-			console.log(response);
+			await axios.post(API_URL, formData);
+
+			showModal();
+			setShowConfetti(true);
+
+			setTimeout(() => {
+				// closeModal();
+				setShowConfetti(false);
+			}, 1000 * 5);
+
+			resetFirst();
+			resetSecond();
 		} catch (error) {
 			console.log(error);
 		} finally {
-			setLoading(false);
+			setFirstLoading(false);
+			setSecondLoading(false);
 		}
+	}
+
+	const showModal = () => {
+		setModalVisible(true);
+	};
+
+	const closeModal = () => {
+		setModalVisible(false);
 	};
 
 	return (
@@ -127,7 +187,8 @@ function WaitlistPage() {
 				</div>
 
 				<form
-					onSubmit={handleSubmit(onWaitlistSubmit)}
+					onSubmit={handleSubmitFirst(onWaitlistSubmitFirst)}
+					name="submit-to-google-sheet"
 					className="mt-20 flex flex-col items-center justify-center md:mt-10"
 				>
 					<label
@@ -140,17 +201,20 @@ function WaitlistPage() {
 					<div className="relative mt-6 h-16 w-full max-w-[420px] rounded-lg bg-[#1f171799]">
 						<input
 							type="email"
-							{...register('email')} // Register the input field
+							{...registerFirst('email')} // Register the input field
 							className="h-full w-full rounded-lg bg-transparent py-5 pl-8 pr-[126px] text-white"
 							placeholder="Email address"
 						/>
 
 						<button
 							type="submit"
-							className="absolute top-1/2 right-4 w-[120px] -translate-y-1/2 transform rounded-lg bg-[#1F1717] px-4 py-2 text-xl text-white"
-							disabled={loading}
+							className={
+								'absolute top-1/2 right-4 w-[120px] -translate-y-1/2 transform rounded-lg bg-[#1F1717] px-4 py-2 text-xl text-white' +
+								(firstLoading ? ' cursor-not-allowed opacity-50' : '')
+							}
+							disabled={firstLoading}
 						>
-							{!loading ? 'Join' : <Spin indicator={antIcon} />}
+							{!firstLoading ? 'Join' : <Spin indicator={antIcon} />}
 						</button>
 					</div>
 				</form>
@@ -176,7 +240,7 @@ function WaitlistPage() {
 				</div>
 
 				<form
-					onSubmit={handleSubmit(onWaitlistSubmit)}
+					onSubmit={handleSubmitSecond(onWaitlistSubmitSecond)}
 					className="mt-20 flex flex-col items-center justify-center md:mt-10"
 				>
 					<label
@@ -189,16 +253,20 @@ function WaitlistPage() {
 					<div className="relative mt-6 h-16 w-full max-w-[420px] rounded-lg bg-[#4c288480]">
 						<input
 							type="email"
-							{...register('email')} // Register the input field
+							{...registerSecond('email')} // Register the input field
 							className="h-full w-full rounded-lg bg-transparent py-5 pl-8 pr-[126px] text-white placeholder:text-[#ffffff80]"
 							placeholder="Email address"
 						/>
 
 						<button
 							type="submit"
-							className="absolute top-1/2 right-4 w-[120px] -translate-y-1/2 transform rounded-lg bg-[#4C2884] px-4 py-2 text-xl text-white"
+							className={
+								'absolute top-1/2 right-4 w-[120px] -translate-y-1/2 transform rounded-lg bg-[#4C2884] px-4 py-2 text-xl text-white' +
+								(secondLoading ? ' cursor-not-allowed opacity-50' : '')
+							}
+							disabled={secondLoading}
 						>
-							Join
+							{!secondLoading ? 'Join' : <Spin indicator={antIcon2} />}
 						</button>
 					</div>
 				</form>
@@ -229,6 +297,34 @@ function WaitlistPage() {
 					<span className="text-xl"> &copy; 2023</span>
 				</div>
 			</div>
+
+			{showConfetti && (
+				<Confetti
+					width={width}
+					height={height}
+					numberOfPieces={100}
+					style={{ zIndex: 2000 }}
+				/>
+			)}
+
+			<Modal
+				title=""
+				open={modalVisible}
+				onOk={closeModal}
+				onCancel={closeModal}
+				style={{ top: '30vh' }}
+				bodyStyle={{ height: '20vh' }}
+				footer={null}
+				className="waitlist-modal"
+			>
+				<h3 className="mb-2 text-center text-xl font-bold">
+					Congratulations! 🥳
+				</h3>
+				<p className="text-center text-base">
+					You&apos;ve successfully joined our waitlist. Stay tuned for updates
+					and exciting offers.
+				</p>
+			</Modal>
 		</>
 	);
 }
