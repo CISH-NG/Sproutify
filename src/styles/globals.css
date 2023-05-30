@@ -117,4 +117,11 @@ body {
 		font-size: 18px;
 		color: #a0a0a0;
 	}
+
+	.waitlist-modal .ant-modal-body {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
 }
